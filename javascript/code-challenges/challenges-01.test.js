@@ -83,17 +83,26 @@ Return the resulting output array.
 
 const fizzbuzz = (arr) => {
   // Solution code here...
-  var outArray;
-  arr.forEach((element,index) => {
+  var  outArray=[];
 
-      if(element%3==0)
-      outArray.push('Fizz');
-      else if(element%5==0)
-      outArray.push('Buzz');
-      else if(element%3==0 && element%5==0)
+  arr.forEach(element => {
+
+    if(element%3===0 && element%5===0)
+    {
       outArray.push('Fizz Buzz');
+    }
+      else  if(element%3===0)
+      {
+      outArray.push('Fizz');
+      }
+      else if(element%5===0)
+      {
+      outArray.push('Buzz');
+      }
       else
-      outArray.push(arr[index]);
+      {
+      outArray.push(element);
+      }
 
   });
   return outArray;
