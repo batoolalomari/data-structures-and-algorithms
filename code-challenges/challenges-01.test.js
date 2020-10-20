@@ -10,10 +10,12 @@ Then, write a function named speaker that takes in a string and a callback funct
 
 const greeting = (word) => {
   // Solution code here...
+  return word.toUpperCase();
 };
 
 const speaker = (message, callback) => {
   // Solution code here...
+  return callback(message);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -34,10 +36,17 @@ Return the modified array.
 
 const addValues = (arr, value) => {
   // Solution code here...
+  arr.push(value);
 };
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
+ 
+  for (let index = 0; index < times; index++) {
+    callback(arr,num);
+    
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -60,6 +69,13 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   // Solution code here...
+  let list=[];
+  availableItems.forEach(element => {
+    if(element.available)
+list.push(element.name);
+    
+  });
+  return list;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -78,6 +94,19 @@ Return the resulting output array.
 
 const fizzbuzz = (arr) => {
   // Solution code here...
+  let array=[];
+  arr.forEach(element => {
+    if(element%3===0&&element%5===0)
+    array.push('Fizz Buzz');
+    else if(element%3===0)
+    array.push('Fizz');
+    else if(element%5===0)
+    array.push('Buzz');
+    else 
+    array.push(element);
+
+  });
+  return array;
 };
 
 /* ------------------------------------------------------------------------------------------------
