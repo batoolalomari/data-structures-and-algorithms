@@ -155,6 +155,7 @@ const sortPeopleBetter = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 10 - Stretch Goal
 
+
 Write a function named sortMeetingsByDay that takes in an array of objects, each of 
 which represents a meeting happening a particular day of the week, with a particular start 
 time and end time.
@@ -162,6 +163,11 @@ time and end time.
 Sort the meetings by the day on which they happen, Monday-Friday. It does not matter which
  order meetings come in on a particular day. For example, if there are two meetings on Monday,
  it does not matter which comes first.
+
+Write a function named sortMeetingsByDay that takes in an array of objects, each of which represents a meeting happening a particular day of the week, with a particular start time and end time.
+
+Sort the meetings by the day on which they happen, Monday-Friday. It does not matter which order meetings come in on a particular day. For example, if there are two meetings on Monday, it does not matter which comes first.
+ main
 ------------------------------------------------------------------------------------------------ */
 
 function Meeting(dayOfWeek, start, end) {
