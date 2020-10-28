@@ -79,9 +79,9 @@ const mapTwoToThe = (arr) => {
   arr.map(function(n){
  arr2.push( Math.pow(2,n));
   })
-  return arr2;
 
-  
+  return arr2
+
 
 
 };
