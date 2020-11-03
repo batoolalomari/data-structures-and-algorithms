@@ -11,13 +11,13 @@ E.g. [4,2,7,5,9,2] -> 9
 const maxInArray = (arr) => {
   // Solution code here...
  
-  let accumulator=arr[0];
-let max = numbers.reduce( (value,idx)=> {
+  let max=arr[0];
+let num = arr.reduce( (value,idx)=> {
   
-  max = Math.max(accumulator,idx);
+  max = Math.max(max,idx);
   return max;
 })
-return max;
+return num;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -55,7 +55,7 @@ const grandTotal = (stores) => {
     
     
   }
-  return hourSum;
+  return total;
 
 };
 
@@ -109,6 +109,17 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
+  let quantity = 0;
+  arr.forEach(obj => {
+    if (obj.store === 'Pet store'){
+      obj.items.forEach(item => {
+        if (item.name === 'Treats'){
+          quantity = item.quantity;
+        };
+      })
+    }
+  })
+  return(quantity);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -131,17 +142,7 @@ The top row of the board is considered row zero and row numbers increase as they
 
 const battleship = (board, row, col) => {
   //  Solution code here...
-  let quantity = 0;
-  arr.forEach(obj => {
-    if (obj.store === 'Pet store'){
-      obj.items.forEach(item => {
-        if (item.name === 'Treats'){
-          quantity = item.quantity;
-        };
-      })
-    }
-  })
-  return(quantity);
+ 
 };
 
 /* ------------------------------------------------------------------------------------------------
